@@ -1,0 +1,26 @@
+img {
+  width: 500px;
+}
+
+.coments_ul {
+  width: 80vw;
+  background-color: lightgray;
+  margin: 1rem auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.coments_ul li {
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
+  width: 80%;
+  margin: 0 auto;
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
