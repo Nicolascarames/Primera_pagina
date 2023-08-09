@@ -7,7 +7,7 @@ export const ChangeUsername = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch(`https://api-1-navidad.onrender.com/user/${username}`, {
+    await fetch(`http://localhost:3000/user/${username}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

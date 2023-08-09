@@ -6,7 +6,7 @@ export const Coments = () => {
   const [info, refresh] = useComents();
 
   useEffect(() => {
-    const t = setInterval(refresh, 5000);
+    const t = setInterval(refresh, 50000);
     return () => clearInterval(t);
   }, [refresh]);
 
