@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+button {
+  padding: 5px 15px;
+  border-radius: 7px;
+  border: none;
+  background-color: blueviolet;
+}

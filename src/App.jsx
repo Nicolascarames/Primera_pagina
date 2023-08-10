@@ -6,6 +6,7 @@ import { LoginOrSignup } from "./Components/intro/LoginOrSignup";
 import { Coments } from "./Components/main/Coments";
 import { Menu } from "./Components/intro/Menu";
 import { useEffect } from "react";
+import { NewComent } from "./Components/main/NewComent";
 
 function App() {
   const [user] = useUser();
@@ -44,6 +45,7 @@ function App() {
           <Menu />
         </header>
         <section>
+          <NewComent />
           <Coments />
         </section>
       </main>

@@ -15,15 +15,17 @@ export const Coments = () => {
 
   return (
     <ul className="coments_ul">
-      {info?.data.map((coment) => (
-        <li key={coment.idcoments}>
-          <p>{coment.text}</p>
-          <img
-            src={`${import.meta.env.VITE_URLIMAGESBACK}${coment.image}`}
-            alt="papa"
-          />
-        </li>
-      ))}
+      {info?.data
+        .sort((a, b) => b.id - a.id)
+        .map((coment) => (
+          <li key={coment.id}>
+            <p>{coment.text}</p>
+            <img
+              src={`${import.meta.env.VITE_URLIMAGESBACK}${coment.image}`}
+              alt="papa"
+            />
+          </li>
+        ))}
     </ul>
   );
 };
