@@ -19,11 +19,11 @@ export const Coments = () => {
         .sort((a, b) => b.id - a.id)
         .map((coment) => (
           <li key={coment.id}>
-            <p>{coment.text}</p>
             <img
               src={`${import.meta.env.VITE_URLIMAGESBACK}${coment.image}`}
               alt="papa"
             />
+            <p>{coment.text}</p>
           </li>
         ))}
     </ul>

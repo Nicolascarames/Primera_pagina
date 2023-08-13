@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useUser } from "../../UserContext";
 import "./coments.css";
+import { Button } from "@mui/material";
 
 export const NewComent = () => {
   const [text, setText] = useState();
@@ -48,14 +49,21 @@ export const NewComent = () => {
           <label htmlFor="file-input">
             <div className="upload-button"> Choose your file </div>
           </label>
+
+          <input id="file-input" type="file" onChange={(e) => setFile(e.target.files[0])}/>
         </div> */}
 
-        <input
-          id="file-input"
-          type="file"
-          onChange={(e) => setFile(e.target.files[0])}
-        />
-        <button type="submit">Enviar</button>
+        <label className="file_input">
+          <span>Selec. archivo</span>
+          <input
+            id="file-input"
+            type="file"
+            onChange={(e) => setFile(e.target.files[0])}
+          />
+        </label>
+        <Button type="submit" variant="contained" size="small" color="ochre">
+          Enviar
+        </Button>
       </form>
     </>
   );

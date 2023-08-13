@@ -1,7 +1,8 @@
 import { useUser } from "./UserContext";
 import "./App.css";
+
 import "./Components/intro/intro.css";
-import "./Components/main/main.css";
+import "./main.css";
 import { LoginOrSignup } from "./Components/intro/LoginOrSignup";
 import { Coments } from "./Components/main/Coments";
 import { Menu } from "./Components/intro/Menu";
@@ -41,7 +42,11 @@ function App() {
     <>
       <main className="main">
         <header>
-          {!user.token ? <LoginOrSignup /> : <p>Bienvenido {username}</p>}
+          {!user.token ? (
+            <LoginOrSignup />
+          ) : (
+            <p className="name">Bienvenido {username}</p>
+          )}
           <Menu />
         </header>
         <section>

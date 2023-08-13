@@ -3,10 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --bg1: #252422;
+  --bg2: #403d39;
+  --bg3: #ccc5b9;
+  --bg4: #fffcf2;
+
+  --boton1: #eb5e28;
+  --boton2: #fca311;
+}
 
 button {
-  padding: 5px 15px;
-  border-radius: 7px;
   border: none;
-  background-color: blueviolet;
+  padding: 5px 10px;
+  border-radius: 5px;
 }

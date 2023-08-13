@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useUserActions } from "../../hooks/api";
 import { useUser } from "../../UserContext";
+import { Button } from "@mui/material";
 
 export const Login = () => {
   const { login } = useUserActions();
@@ -22,7 +23,7 @@ export const Login = () => {
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="email"
+          placeholder="Email"
         />
       </label>
       <label>
@@ -35,7 +36,9 @@ export const Login = () => {
         />
       </label>
 
-      <button>Login</button>
+      <Button type="submit" variant="contained" size="small" color="ochre">
+        Login
+      </Button>
     </form>
   );
 };
