@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useUser } from "../../UserContext";
-import "./coments.css";
+import "./Coments.css";
 import { Button } from "@mui/material";
 
 export const NewComent = () => {

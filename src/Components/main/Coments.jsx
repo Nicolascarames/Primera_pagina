@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useComents } from "../../hooks/api";
-import "./coments.css";
+import "./Coments.css";
 
 export const Coments = () => {
   const [info, refresh] = useComents();
