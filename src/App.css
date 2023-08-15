@@ -18,3 +18,8 @@ button {
   padding: 5px 10px;
   border-radius: 5px;
 }
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg2);
+}

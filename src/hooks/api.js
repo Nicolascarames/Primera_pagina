@@ -4,9 +4,12 @@ import { useFetchPost, useFetchRefresh } from "./useFetchActions";
 // const login ="https://api-1-navidad.onrender.com/login"
 // const coments ="https://api-1-navidad.onrender.com/coments"
 // const newuser ="https://api-1-navidad.onrender.com/newuser"
-const loginurl = "https://api1.naviwarrior.es/login";
-const coments = "https://api1.naviwarrior.es/coments";
-const newuser = "https://api1.naviwarrior.es/newuser";
+// const loginurl = "https://api1.naviwarrior.es/login";
+// const coments = "https://api1.naviwarrior.es/coments";
+// const newuser = "https://api1.naviwarrior.es/newuser";
+const loginurl = `${import.meta.env.VITE_URLBACK}/login`;
+const coments = `${import.meta.env.VITE_URLBACK}/coments`;
+const newuser = `${import.meta.env.VITE_URLBACK}/newuser`;
 
 export const useComents = () => useFetchRefresh(coments);
 
@@ -14,17 +17,17 @@ export const useUserActions = () => {
     const [, setUser] = useUser();
     const post = useFetchPost();
 
-    const login = (email, password) =>
+    const login = (username, password) =>
         post(loginurl, {
-            email,
+            username,
             password,
         }).then((data) => setUser(data));
 
-    const signup = (email, password) =>
+    const signup = (username, password) =>
         post(newuser, {
-            email,
+            username,
             password,
-        }).then((data) => setUser(data));
+        });
 
     return { login, signup };
 };

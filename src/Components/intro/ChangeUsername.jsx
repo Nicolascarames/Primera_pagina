@@ -4,10 +4,11 @@ import { useUser } from "../../UserContext";
 export const ChangeUsername = () => {
   const [username, setUsername] = useState();
   const [user, setUser] = useUser();
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch(`https://api1.naviwarrior.es/user/${username}`, {
+    await fetch(`${import.meta.env.VITE_URLBACK}/user/${username}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

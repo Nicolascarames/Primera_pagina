@@ -21,7 +21,7 @@ export const Coments = () => {
           <li key={coment.id}>
             <img
               src={`${import.meta.env.VITE_URLIMAGESBACK}${coment.image}`}
-              alt="papa"
+              alt="imagen no encontrada"
             />
             <p>{coment.text}</p>
           </li>

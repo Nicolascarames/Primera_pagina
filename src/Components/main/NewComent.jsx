@@ -17,7 +17,7 @@ export const NewComent = () => {
 
       // await ModifyUser(formdata, user.token);
 
-      const res = await fetch("https://api1.naviwarrior.es/post", {
+      const res = await fetch(`${import.meta.env.VITE_URLBACK}/post`, {
         method: "POST",
         headers: {
           Authorization: `${user.token}`,

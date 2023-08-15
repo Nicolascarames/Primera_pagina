@@ -4,12 +4,14 @@ import { Button } from "@mui/material";
 
 export const Signup = () => {
   const { signup } = useUserActions();
-  const [email, setUsername] = useState();
+  const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await signup(email, password);
+    await signup(username, password);
+    alert('Usuario creado con exito, ahora inicia sesion!')
+    window.location.reload()
   };
 
   return (
@@ -17,10 +19,10 @@ export const Signup = () => {
       <p>Registrate:</p>
       <label>
         <input
-          value={email}
+          value={username}
           onChange={(e) => setUsername(e.target.value)}
           name="username"
-          placeholder="Email"
+          placeholder="Username"
         />
       </label>
       <label>

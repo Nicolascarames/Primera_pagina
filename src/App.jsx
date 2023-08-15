@@ -36,7 +36,7 @@ function App() {
     );
   }
 
-  const username = user.username ? user.username : user.email;
+  const username = user.username ? user.username : '';
 
   return (
     <>
