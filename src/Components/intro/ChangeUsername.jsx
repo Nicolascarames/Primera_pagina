@@ -7,7 +7,7 @@ export const ChangeUsername = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch(`http://api1.naviwarrior.es/user/${username}`, {
+    await fetch(`https://api1.naviwarrior.es/user/${username}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

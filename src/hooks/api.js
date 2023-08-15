@@ -4,9 +4,9 @@ import { useFetchPost, useFetchRefresh } from "./useFetchActions";
 // const login ="https://api-1-navidad.onrender.com/login"
 // const coments ="https://api-1-navidad.onrender.com/coments"
 // const newuser ="https://api-1-navidad.onrender.com/newuser"
-const loginurl = "http://api1.naviwarrior.es/login";
-const coments = "http://api1.naviwarrior.es/coments";
-const newuser = "http://api1.naviwarrior.es/newuser";
+const loginurl = "https://api1.naviwarrior.es/login";
+const coments = "https://api1.naviwarrior.es/coments";
+const newuser = "https://api1.naviwarrior.es/newuser";
 
 export const useComents = () => useFetchRefresh(coments);
 
