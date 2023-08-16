@@ -4,7 +4,6 @@ import { useUser } from "../../UserContext";
 export const ChangeUsername = () => {
   const [username, setUsername] = useState();
   const [user, setUser] = useUser();
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
