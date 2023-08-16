@@ -2,11 +2,13 @@ import { useState } from "react";
 import { useUser } from "../../UserContext";
 import "./Coments.css";
 import { Button } from "@mui/material";
+import { useComents } from "../../hooks/api";
 
 export const NewComent = () => {
   const [text, setText] = useState();
   const [file, setFile] = useState();
   const [user] = useUser();
+  const [refresh] = useComents();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +29,10 @@ export const NewComent = () => {
       });
 
       if (res.ok) {
+        setText('')
+        setFile('')
         alert("subida correcta");
+        refresh()
       }
     } catch (error) {
       console.log(error);
